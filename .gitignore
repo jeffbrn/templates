@@ -1,0 +1,26 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+# build directories
+obj/
+bin/
+wwwroot/
+
+# User-specific files
+*.suo
+*.user
+
+# Resharper files
+_ReSharper.Caches/
+*.DotSettings
+
+# VS Code files
+.vscode/
+
+# Visual Studio Files
+.vs/
+
+# Node files/npm
+node_modules/
+*package-lock\.json
+
+# Make sure secrets arent checked in
+secrets.yaml
