@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace ConsoleApplication.Application {
 	public abstract class ConsoleAppBase : IDisposable {
@@ -23,6 +24,7 @@ namespace ConsoleApplication.Application {
 				.AddCommandLine(args)
 				.Build();
 			_services.AddOptions();
+			_services.AddLogging(c => c.AddConsole());
 			_isRunning = new ManualResetEventSlim(false);
 		}
 
